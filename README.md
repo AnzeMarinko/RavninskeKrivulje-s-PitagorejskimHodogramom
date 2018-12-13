@@ -1,6 +1,8 @@
-# Ravninske krivulje s pitagorejskim hodografom
-Seminarska naloga (17) pri predmetu RaËunalniöko podprto geometrijsko oblikovanje
-Avtorja: Jan Fekonja, Anûe Marinko (Fakulteta za matematiko in fiziko, Univerza v Ljubljani)
+Ôªø# Ravninske krivulje s pitagorejskim hodografom
+Seminarska naloga (17) pri predmetu Raƒçunalni≈°ko podprto geometrijsko oblikovanje
+
+Avtorja: Jan Fekonja, An≈æe Marinko (Fakulteta za matematiko in fiziko, Univerza v Ljubljani)
+
 2018/19
 
 ## Vir:
