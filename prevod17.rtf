@@ -1,0 +1,216 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset238 Cambria Math;}{\f1\fnil\fcharset161 Cambria Math;}{\f2\fnil\fcharset0 Cambria Math;}{\f3\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.17134}{\*\mmathPr\mmathFont0\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sl240\slmult1\f0\fs22\par
+Kot je dobro znano [110], so tak\'9ane iteracije kvadratno konvergentne za za\'e8etek\par
+pribli\'9eki, ki so dovolj blizu tk, v tipi\'e8nih primerih pa parameter\par
+Vrednosti tk dobimo s to\'e8nostjo 10\u8722?12 ali bolj\'9ao v samo dveh ali treh\par
+(glej sliko 17.1). Ker je verjetno natan\'e8na enakomernost po dol\'9eini loka\par
+v \'9atevilnih aplikacijah ni klju\'e8nega pomena, zadostuje ena sama ponovitev - obi\'e8ajno\par
+to daje enakomerno razmik do relativne natan\'e8nosti okoli 10\u8722?6 ali bolj\'9ae.\par
+Problem enotnega upodabljanja loka dol\'9eine krivulje nastane naravno\par
+upo\'9atevanje gibanja pri enotni hitrosti vzdol\'9e krivulje. To je najpreprostej\'9ai primer\par
+\'9air\'9aega razreda problemov, ki jih obravnavajo interpolatorski algoritmi v realnem \'e8asu\par
+za digitalne krmilnike gibanja. Celovita razprava o teh problemih,\par
+in prednosti PH krivulj pri njihovem re\'9aevanju najdemo v poglavju. 29.\par
+\par
+\f1\lang1032\'c4t = konstanta \'c4s = konstantna\par
+Slika 17.1. Enakomerno pove\u269?anje parametra krivulje PH (levo) in dol\u382?ine loka (desno).\par
+\f0\par
+17.4 Razli\'e8ne in integralne lastnosti\par
+Ker je parametri\'e8na hitrost PH krivulje r (t) definirana z integracijo (17.4)\par
+je polinom (17.9) in t, njegove elementarne diferencialne lastnosti - enota\par
+tangenta in normalno, in ukrivljenost - vsi imajo racionalno odvisnost\par
+parameter krivulje. Natan\'e8neje, definirani so v smislu polinomov\par
+u (t) in v (t) s\par
+t =\par
+(u2 - v2, 2uv)\par
+\u963?\par
+, n =\par
+(2uv, v2 - u2)\par
+\u963?\par
+, \u954? = 2 uv? - u? V\par
+\u963?2. (17.16)\par
+Za krivuljo stopnje n \endash  n so t in n racionalne funkcije stopnje n \u8722? 1, medtem ko so\par
+\u954? je v \'9atevcu stopnja n - 3 in v imenovalcu 2n - 2.\par
+Dejstvo, da je enota normal n (t) racionalna vektorska funkcija na PH\par
+krivulja r (t) pomeni, da so njeni odmiki rd (t) na vsaki razdalji d racionalne krivulje -\par
+v standardni racionalni B'ezierjevi obliki CAD priznavajo natan\'e8ne predstavitve\par
+(glej \f2\'a7 17.5), ki odpravlja potrebo po podatkovno intenzivnih in nagnjenih k napakam\par
+aproksimacijske sheme ofsetne krivulje [140, 251, 252, 280, 362].\par
+Funkcija racionalne ukrivljenosti je druga prednost nad krivuljami PH\par
+"Navadne" polinomske krivulje, saj integrali mo\f0\'e8i ukrivljenosti s\par
+glede na dol\'9eino loka ds = \u963? dt, ki jo dolo\'e8a. \\ t\par
+V =\par
+? 1\par
+0\par
+\u954?n (t) \u963? (t) dt za n = 0, 1, 2,. . . , (17.17)\par
+lahko natan\'e8no ocenimo z delno razgradnjo integranda\par
+(glej odstavek 3.5). V primeru n = 0 dobimo skupno dol\'9eino loka, ki je opisana v odstavku 17.3 zgoraj.\par
+Ker je \u954? = d\u952? / ds, kjer je \u952? tangentni kot glede na fiksno smer,\par
+integral I1 definira neto rotacijski kot (t.j. z vrtenjem v nasprotni smeri urinega kazalca)\par
+tangento vzdol\'9e krivulje. Spremenjena oblika\par
+I1 analiziramo v odstavku 25.3, z | \u954? | nadome\'9a\'e8en z \u954?, kar pomeni skupno absolutno vrednost\par
+tangentna rotacija - to zahteva delitev domene parametrov [0, 1]\par
+pri vrednostih t, ki dolo\'e8ajo prevojne to\'e8ke PH krivulje.\par
+In kon\'e8no, integral I2 je energija upogibanja krivulje - t.j. sev\par
+energijo, ki je shranjena v tanki, sprva ravni, elasti\'e8ni gredi, ki je upognjena v\par
+obliko krivulje (glej odstavek 14.2). Poglavje 26 obravnava oceno I2 za\par
+PH krivulje podrobno. Upo\'9atevajte, da vrednotenje integralov (17.17) s pomo\'e8jo\par
+delna razgradnja frakcij zahteva faktorizacijo parametrske hitrosti\par
+polinom. Ker po konstrukciji \u963? (t) nima dejanskih korenin, je ta faktorizacija\par
+vklju\'e8uje le izraze, ki ustrezajo kompleksnim-konjugiranim koreninskim parom (kar pomeni\par
+lahko zdru\'9eimo v realne kvadratne faktorje).\par
+17.5 Racionalni odmiki PH krivulj\par
+Premiki na vsaki razdalji d iz krivulje PH r (t), ki jih definira\par
+rd (t) = r (t) + d n (t), (17.18)\par
+priznati natan\'e8no predstavitev kot racionalne B'ezierjeve krivulje, ker je enota normalna\par
+n (t) ima racionalno odvisnost od parametra krivulje t. V primeru kubikov\par
+in kvintike, krivulje odmika so peto oziroma devet. Naj\par
+kontrolne to\'e8ke PH krivulje r (t) se zapi\'9aejo v homogenih koordinatah kot\par
+Pk = (Wk, Xk, Yk) = (1, xk, yk), k = 0,. . . , n.\par
+Razliko teh koordinat naprej dolo\'e8imo z\par
+\u916?Pk = Pk + 1 - Pk = (0, \u916?xk, \u916?yk), k = 0,. . . , n - 1\par
+kjer je \u916?xk = xk + 1 \u8722? xk, \u916?yk = yk + 1 \u8722? yk in nastavimo \u916?P\par
+k = (0, \u916?yk, \u8722?\u916?xk).\par
+Odmik na razdalji d od PH krivulje r (t) je dolo\'e8en z (17.18), kjer\par
+norma na r (t) je podana z (17.16). Odmik se lahko izrazi kot\par
+rd (t) =\par
+?\par
+X (t)\par
+W (t),\par
+Y (t)\par
+W (t)\par
+?\par
+kjer sta W (t), X (t), Y (t) polinomi stopnje 2n - 1, katerih koeficienti\par
+Ok = (Wk, Xk, Yk), k = 0,. . . , 2n - 1\par
+dolo\'e8imo B'ezierjeve kontrolne to\'e8ke racionalne krivulje odmika.\par
+Homogene koordinate za kontrolne to\'e8ke odmika so lahko\par
+strnjeno izra\'9eene v smislu prvotne krivulje [148, 186] kot\par
+Ok =\par
+min (? n \u8722? 1, k)\par
+j = max (0, k \u8722? n)\par
+?\par
+n - 1\par
+j\par
+??\par
+n\par
+k - j\par
+?\par
+?\par
+2n - 1\par
+k\par
+? (\u963?jPk \u8722? j + dn\u916?P\u8869?\par
+j), k = 0,. . . , 2n \u8722? 1.\par
+Torej, za PH kubike, so kontrolne to\'e8ke racionalnih kvintnih odmikov\par
+O0 = \u963?0P0 + 3d\u916?P\u8869?\par
+0,\par
+O1 =\par
+1\par
+5\par
+[2\u963?1P0 + 3\u963?0P1 + 3d (3\u916?P\u8869?\par
+0 + 2\u916?P\u8869?\par
+1)],\par
+O2 =\par
+1\par
+10\par
+[\u963?2P0 + 6\u963?1P1 + 3\u963?0P2 + 3d (3\u916?P\u8869?\par
+0 + 6\u916?P\u8869?\par
+1 + \u916?P\u8869?\par
+2)],\par
+O3 =\par
+1\par
+10\par
+[3\u963?2P1 + 6\u963?1P2 + \u963?0P3 + 3d (\u916?P\u8869?\par
+0 + 6\u916?P\u8869?\par
+1 + 3\u916?P\u8869?\par
+2)],\par
+O4 =\par
+1\par
+5\par
+[3\u963?2P2 + 2\u963?1P3 + 3d (2\u916?P\u8869?\par
+1 + 3\u916?P\u8869?\par
+2)],\par
+O5 = \u963?2P3 + 3d\u916?P\u8869?\par
+2.\par
+Za PH kvintike so racionalni nadomestki stopnje 9 s kontrolnimi to\'e8kami\par
+O0 = \u963?0P0 + 5d\u916?P\u8869?\par
+0,\par
+O1 =\par
+1\par
+9\par
+[4\u963?1P0 + 5\u963?0P1 + 5d (5\u916?P\u8869?\par
+0 + 4\u916?P\u8869?\par
+1)],\par
+O2 =\par
+1\par
+18\par
+[3\u963?2P0 + 10\u963?1P1 + 5\u963?0P2 + 5d (5\u916?P\u8869?\par
+0 + 10\u916?P\u8869?\par
+1 + 3\u916?P\u8869?\par
+2)],\par
+O3 =\par
+1\par
+42\par
+[2\u963?3P0 + 15\u963?2P1 + 20\u963?1P2 + 5\u963?0P3\par
++ 5d (5\u916?P\u8869?)\par
+0 + 20\u916?P\u8869?\par
+1 + 15\u916?P\u8869?\par
+2 + 2\u916?P\u8869?\par
+3)],\par
+O4 =\par
+1\par
+126\par
+[\u963?4P0 + 20\u963?3P1 + 60\u963?2P2 + 40\u963?1P3 + 5\u963?0P4\par
++ 5d (5\u916?P\u8869?)\par
+0 + 40\u916?P\u8869?\par
+1 + 60\u916?P\u8869?\par
+2 + 20\u916?P\u8869?\par
+3 + \u916?P\u8869?\par
+4)],\par
+O5 =\par
+1\par
+126\par
+[5\u963?4P1 + 40\u963?3P2 + 60\u963?2P3 + 20\u963?1P4 + \u963?0P5\par
++ 5d (\u916?P\u8869?\par
+0 + 20\u916?P\u8869?\par
+1 + 60\u916?P\u8869?\par
+2 + 40\u916?P\u8869?\par
+3 + 5\u916?P\u8869?\par
+4)],\par
+O6 =\par
+1\par
+42\par
+[5\u963?4P2 + 20\u963?3P3 + 15\u963?2P4 + 2\u963?1P5\par
++ 5d (2\u916?P\u8869?\par
+1 + 15\u916?P\u8869?\par
+2 + 20\u916?P\u8869?\par
+3 + 5\u916?P\u8869?\par
+4)],\par
+O7 =\par
+1\par
+18\par
+[5\u963?4P3 + 10\u963?3P4 + 3\u963?2P5 + 5d (3\u916?P\u8869?\par
+2 + 10\u916?P\u8869?\par
+3 + 5\u916?P\u8869?\par
+4)],\par
+O8 =\par
+1\par
+9\par
+[5\u963?4P4 + 4\u963?3P5 + 5d (4\u916?P\u8869?\par
+3 + 5\u916?P\u8869?\par
+4)],\par
+O9 = 44P5 + 5d\u916?P\u8869?\par
+4.\par
+Slika 17.2 prikazuje krmilne poligone, ki jih dolo\'e8ajo zgornje formule,\par
+in odmaknjene krivulje, ki jih definirajo, za nekatere PH kvintike. Ker so zamiki\par
+racionalne krivulje (vsaka kontrolna to\'e8ka ima na splo\'9ano razli\'e8no te\'9eo Wk)\par
+kontrolni poligoni zamikov niso nujno intuitivni kazalci\par
+obliko krivulj, ki jih dolo\'e8ajo. Na sliki 17.3 je razvidno, da se d\par
+kontrolne to\'e8ke odmika krivulje se premikajo enakomerno po ravnih \'e8rtah.\par
+Slika 17.2. Levo: B'ezierjevi kontrolni poligoni za notranja in zunanja odstopanja 9 stopnje in a\par
+PH quintic (upo\'9atevajte, da ima vsaka kontrolna to\'e8ka druga\'e8no te\'9eo). Desno: racionalno\par
+odmiki so natan\'e8ni za vsak d - tudi \'e8e razvijejo zobke in samoprekri\'9eja.\par
+Slika 17.3. Nadzor poligonov za premike na dveh razli\'e8nih razdaljah d od PH kvintike:\par
+ko se d pove\'e8a, se to\'e8ke odmika premikajo enakomerno vzdol\'9e nekaterih ravnih \'e8rt.\f3\lang36\par
+}
+ 
