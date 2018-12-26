@@ -59,9 +59,9 @@
 	\end{remark}
 
 	\section{B\'ezierjeve kontrolne točke krivulj s PH}
-	Osredotočimo se predvsem na primitivne Pitagorejske hodograme ($u$ in $v$ brez skupne ničle, $w(t)=1$). Taki hodogrami definirajo regularne krivulje s PH, ki zadoščajo $r\prime (t)\not = 0$ za vse $t$. Točka na parametrični krivulji, kjer je $r\prime (t)=0$, je neregularna točka - običajno je to konica ali nenaden obrat tangente. Uporaba ne-konstantnega polinoma $w (t)$ naredi konice (nezaželena značilnost) na ustrezni krivulji s PH, če ima $w (t)$ realne ničle znotraj domene parametra krivulje. Krivulje s PH definirane z integracijo (\ref{eq:3}) primitivnih hodogramov so lihe stopnje, $n = 2\mu + 1$.
+	Osredotočimo se predvsem na primitivne Pitagorejske hodograme ($u$ in $v$ brez skupne ničle, $w(t)=1$). Taki hodogrami definirajo regularne krivulje s PH, ki zadoščajo $r\prime (t)\not = 0$ za vse $t$. Točka na parametrični krivulji, kjer je $r\prime (t)=0$, je neregularna točka - običajno je to konica ali nenaden obrat tangente. Uporaba nekonstantnega polinoma $w (t)$ naredi konice (kar je nezaželena lastnost) na ustrezni krivulji s PH, če ima $w (t)$ realne ničle znotraj domene parametra krivulje. Krivulje s PH definirane z integracijo (\ref{eq:3}) primitivnih hodogramov so lihe stopnje, $n = 2\mu + 1$.
 	
-	Najenostavnejše netrivialne krivulje s PH dobljene z $w (t) = 1$ in linearnih Bernsteinovih polinomov:
+	Najenostavnejše netrivialne krivulje s PH dobljene z $w (t) = 1$ in linearnima Bernsteinovima polinomoma:
 	\begin{eqnarray}
 	u (t) &=& u_0 B^1_0(t) + u_1 B^1_1(t),\nonumber\\
 	v (t) &=& v_0 B^1_0(t) + v_1 B^1_1(t),\nonumber
@@ -125,15 +125,16 @@
 	Da bi integrirali $\sigma (t)$ in tako dobili dolžino loka $s$ kot polinomsko funkcijo parametra,
 	$$s (t) =\int^t_0\sigma(\tau) d\tau,$$
 	uporabimo integracijsko pravilo za Bernsteinove bazne polinome. To nam da
-	$$s (t) =\sum^n_{k=0}s_k\binom{n}{k}(1-t)^{n-k}t^k,$$
+	$$s (t) =\sum^n_{k=0}s_k\binom{n}{k}(1-t)^{n-k}t^k=\sum_{k=0}^n s_kB^n_k(t),$$
 	kjer je $s_0=0$ in $s_k=\frac{1}{n}\sum^{k-1}_{j=0}\sigma_j, k=1,\ldots,n.$
 	
 	Torej je skupna dolžina loka $S$ preprosto
 	$S = s (1) = \frac{\sigma_0+\sigma_1+\ldots+\sigma_{n-1}}{n}.$
-	Za izračun dolžine loka izseka krivulje s PH za $t\in\lbrack a, b\rbrack$ vzamemo kar razliko $s (b) -s (a)$.
+	Za izračun dolžine loka izseka krivulje s PH za $t\in\lbrack a, b\rbrack$ pa vzamemo kar razliko $s (b) -s (a)$.
 	
-	Podobno je veliko preprosteje določiti vrednost parametra $t_*$, do katerega je dolžina loka (merjeno od $t = 0$) enaka dani vrednosti $s_*$ - t.j. rešiti enačbo $s (t_*) = s_*$
-	za $t_*$. Običajno se $r (t)$ prikaže z vrednotenjem vrednosti parametrov $t_0,\ldots , t_N$, ki ustreza enotnemu prirastku parametra $\Delta t = t_k- t_{k- 1}, k = 1,\ldots , N$. Vendar pa s tem dobimo neenakomerno razmaknjene (po dolžini loka) točke $r (t_k)$ na krivulji, saj parametrična hitrost $\sigma (t)$ v splošnem ni konstantna.
+	Podobno je veliko preprosteje določiti vrednost parametra $t_*$, do katerega je dolžina loka (merjeno od $t = 0$) enaka dani vrednosti $s_*$ - t.j. rešiti enačbo $s (t_*) = s_*$ za $t_*$.
+	
+	Običajno se $r (t)$ prikaže z vrednotenjem vrednosti parametrov $t_0,\ldots , t_N$, ki ustreza enotnemu prirastku parametra $\Delta t = t_k- t_{k- 1}, k = 1,\ldots , N$. Vendar pa s tem dobimo neenakomerno razmaknjene (po dolžini loka) točke $r (t_k)$ na krivulji, saj parametrična hitrost $\sigma (t)$ v splošnem ni konstantna.
 	
 	Vseeno, če parametrična hitrost krivulje s PH ni konstantna, lahko s $s (t)$ enostavno popravimo to težavo. Naj bodo $t_0,\ldots, t_N$ vrednosti parametrov točk, ki so enakomerno razporejene z razmakom dolžine loka $\Delta s = S / N$, tako da
 	$$s (t_k) = k\Delta s, k = 1,\ldots , N - 1,$$
@@ -143,15 +144,15 @@
 	$$t^{(r)}_k = t^{(r-1)}_{k-1}+\frac{s(t^{(r-1)}_k}{\sigma(t^{(r-1)}_k)}, r = 1, 2,\ldots.$$
 	Zadošča že kakšna iteracija, da dosežemo zadovoljivo natančnost.
 	
-	\textit{$\Delta t = konstanta$, $\Delta s = konstantna$\\
-	\textbf{Slika}. Enakomerno povečanje parametra krivulje s PH (levo) in dolžine loka (desno).}
+	
+	\textit{\\ \textbf{Slika}. Enakomerno povečanje parametra krivulje s PH (levo) in dolžine loka (desno). Prikaz točk na krivulji, kjer $\Delta t = konstanta$ oz. $\Delta s = konstantna$.}
 	
 	\section{Lastnosti odvoda in integrala}
 	Ker je parametrična hitrost krivulje s PH $r (t)$ definirane z integracijo polinom v $t$, imajo osnovne lastnosti njenih odvodov - enotski tangentni vektor, normala in ukrivljenost - racionalno odvisnost od parametra krivulje. Natančneje, definirani so v smislu polinomov $u (t)$ in $v (t)$, kjer
 	$$\textbf{t} =\frac{(u^2 - v^2, 2uv)}{\sigma},\hspace{10pt} \textbf{n} =\frac{(2uv, v^2 - u^2)}{\sigma},\hspace{10pt} \kappa = 2 \frac{uv\prime - u\prime v}{\sigma^2}.$$
-	Za krivuljo s PH stopnje $n$ sta $\textbf{n}$ in $\textbf{t}$ racionalni funkciji stopnje $n - 1$, medtem ko ima $\kappa$ v števcu stopnjo $n - 3$ in v imenovalcu $2n - 2$.
+	
 	\section{Racionalni odmiki krivulj s PH}
-	Preberi prejšnje in dodaj neko besedilo ...
+	...
 	
 	\begin{thebibliography}{1}
 		\bibitem{knjiga} R. T. Farouki: Pythagorean-Hodograph Curves: Algebra and Geometry Inseparable, poglavje 17 in 19.
