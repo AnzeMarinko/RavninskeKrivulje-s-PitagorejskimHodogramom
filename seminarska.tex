@@ -147,12 +147,37 @@
 	
 	\textit{\\ \textbf{Slika}. Enakomerno povečanje parametra krivulje s PH (levo) in dolžine loka (desno). Prikaz točk na krivulji, kjer $\Delta t = konstanta$ oz. $\Delta s = konstantna$.}
 	
-	\section{Lastnosti odvoda in integrala}
+	\section{Lastnosti odvoda krivulje}
 	Ker je parametrična hitrost krivulje s PH $r (t)$ definirane z integracijo polinom v $t$, imajo osnovne lastnosti njenih odvodov - enotski tangentni vektor, normala in ukrivljenost - racionalno odvisnost od parametra krivulje. Natančneje, definirani so v smislu polinomov $u (t)$ in $v (t)$, kjer
 	$$\textbf{t} =\frac{(u^2 - v^2, 2uv)}{\sigma},\hspace{10pt} \textbf{n} =\frac{(2uv, v^2 - u^2)}{\sigma},\hspace{10pt} \kappa = 2 \frac{uv\prime - u\prime v}{\sigma^2}.$$
 	
 	\section{Racionalni odmiki krivulj s PH}
-	...
+	Odmiki pri vsaki razdalji $d$ od krivulje s PH $r (t)$, definirani kot
+	$$r_d (t) = r (t) + d \textbf{n} (t),$$
+	dovoljujejo natančno predstavitev v smislu racionalnih B\'ezierjevevih krivulj, ker je enotska normala $\textbf{n} (t)$ racionalno odvisna od parametra krivulje $t$. 
+	
+	Naj bodo kontrolne točke krivulje s PH $r (t)$ zapisane v homogenih koordinatah kot
+	$$\textbf{P}_k = (W_k, X_k, Y_k) = (1, x_k, y_k),\hspace{20pt} k = 0,\ldots , n.$$
+	Definirajmo prve diference kot
+	$$\Delta\textbf{P}_k = \textbf{P}_{k + 1} - \textbf{P}_k = (0, \Delta x_k, \Delta y_k),\hspace{20pt} k = 0,\ldots, n - 1$$
+	kjer je $\Delta x_k = x_{k + 1}- x_k, \Delta y_k = y_{k + 1}- y_k$. Naj bo $\Delta\textbf{P}_k^\perp = (0, \Delta y_k, -\Delta x_k).$
+	
+	Odmik za razdaljo $d$ od krivulje s PH $r (t)$ je definiran zgoraj z $r_d(t)$, kjer je normala $\textbf{n}(t)$ na $r (t)$ podana zgoraj. Odmik lahko izrazimo kot
+	$$r_d (t) = \left(\frac{X (t)}{W(t)},\frac{Y(t)}{W(t)}\right),$$
+	kjer so $W (t), X (t), Y (t)$ polinomi stopnje $2n - 1$, katerih koeficienti
+	$$\textbf{O}_k = (W_k, X_k, Y_k), \hspace{10px} k = 0,\ldots , 2n - 1,$$
+	določajo B\'ezierjeve kontrolne točke racionalne krivulje odmika.
+	
+	Homogene koordinate za kontrolne točke odmika so lahko strnjeno izražene v smislu prvotne krivulje kot
+	$$\textbf{O}_k =\sum^{min (n - 1, k)}_{j = max (0, k - n)}\frac{\binom{n-1}{j}\binom{n}{k-j}}{\binom{2n-1}{k}}(\sigma_j\textbf{P}_{k-j}+dn\Delta\textbf{P}_j^\perp), \hspace{10pt} k = 0,\ldots, 2n - 1.$$
+	
+	S tem dobimo za kubične krivulje s PH 6 kontrolnih točk racionalnih odmikov kot krivulj pete stopnje, za krivulje s PH pete stopnje pa dobimo 10 kontrolnih točk racionalnih odmikov kot krivulj devete stopnje.
+	
+	\vspace{90pt}
+	Na tem mestu pridejo slike obravnavane na koncu 17. poglavja, ki govorijo o stabilnosti zamikov ...
+	
+	\section{Nadaljevanje}
+	Obravnava 19. poglavja, implementacija v matlab, zaključek ...
 	
 	\begin{thebibliography}{1}
 		\bibitem{knjiga} R. T. Farouki: Pythagorean-Hodograph Curves: Algebra and Geometry Inseparable, poglavje 17 in 19.
