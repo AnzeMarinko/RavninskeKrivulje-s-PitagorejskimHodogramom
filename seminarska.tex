@@ -11,14 +11,14 @@
 
 \begin{document}
 	\maketitle
-	\tableofcontents
+	%\tableofcontents
 	
 	\section{Uvod}
-	Hodogram parametrične krivulje $r (t)$ v $\mathbb{R}^n$ je samo njen odvod $r\prime (t)$ podan kot parametrična krivulja. Polinomska krivulja $r (t)$ v $\mathbb{R}^n$ je krivulja s Pitagorejskim hodografom (PH), če so $n$ koordinatnih komponent njenega hodograma elementi Pitagorejskega nabora $(n+1)$ polinomov  oziroma če vsota njihovih kvadratov  sovpada s kvadratom drugega polinoma $\sigma(t)$.
-	Krivulje s PH v $\mathbb{R}^2$ in $\mathbb{R}^3$ zahtevajo precej drugačne pristope njihove karakterizacije, saj Pitagorejski nabori treh in štirih polinomov vključujejo različne algebraične strukture. Ogledali si bomo ravninske krivulje s PH.
+	Hodogram parametrične krivulje $r (t)$ v $\mathbb{R}^n$ je odvod krivulje same $r\prime (t)$ podan kot parametrična krivulja. Polinomska krivulja $r (t)$ v $\mathbb{R}^n$ je krivulja s Pitagorejskim hodogramom (PH), če vsota kvadratov vseh $n$ polinomov na koordinatnih komponentah hodograma krivulje sovpada s kvadratom nekega polinoma $\sigma(t)$.
+	Oglejmo si ravninske krivulje s PH.
 	
 	\section{Ravninske krivulje s Pitagorejskim hodogramom}
-	Ključna lastnost, ki razlikuje ravninsko krivuljo s PH $r (t) = (x (t), y (t))$ od "navadne" polinomske krivulje je privzeta vključitev Pitagorejske strukture v svoj hodogram, in sicer komponente $r\prime (t) = (x\prime (t), y\prime (t))$ morajo zadoščati pogoju $$x\prime^2(t) + y\prime^2(t)= \sigma^2 (t)$$ za nek polinom $\sigma(t)$. To lastnost je dosežena z upoštevanjem sledeče karakterizacije Pitagorejskih trojic polinomov.
+	Ključna lastnost, ki razlikuje ravninsko krivuljo s PH $r (t) = (x (t), y (t))$ od "navadne" polinomske krivulje je privzeta vključitev Pitagorejskega pogoja v svoj hodogram, in sicer komponente $r\prime (t) = (x\prime (t), y\prime (t))$ morajo zadoščati pogoju $$x\prime^2(t) + y\prime^2(t)= \sigma^2 (t)$$ za nek polinom $\sigma(t)$. To lastnost je dosežena z upoštevanjem sledeče karakterizacije Pitagorejskih trojic polinomov.
 	\begin{theorem}
 		Pitagorejski pogoj
 		\begin{equation} \label{eq:1}
@@ -33,20 +33,21 @@
 		kjer imata $u(t)$ in $v(t)$ paroma različne ničle.
 	\end{theorem}
 	\proof
-	Očitno je pogoj \ref{eq:2} zadosten za \ref{eq:1}. Potrebnost pogoja pa je dokazana v \cite{knjiga} na strani 382.
+	Očitno je pogoj \eqref{eq:2} zadosten za \eqref{eq:1}. Potrebnost pogoja pa je dokazana v \cite{knjiga} na strani 382.
 	\endproof
 	\begin{remark} 
 		Rešitve, kjer je $w(t)$ konstantna, imenujejo primitivne Pitagorejske trojice.
 	\end{remark}
-	Tedaj je ravninska krivulja PH $r (t) = (x (t), y (t))$ definirana z nadomestitvijo treh polinomov $u (t), v (t), w (t)$ v izrazih
+	Tedaj je ravninska krivulja s PH $r (t) = (x (t), y (t))$ definirana z zamenjavo treh polinomov $u (t), v (t), w (t)$ v izrazih
 	\begin{eqnarray}\label{eq:3}
 	x\prime(t) &=& \lbrack u^2(t)-v^2(t)\rbrack w(t)\\
 	y\prime(t)&=&2u(t)v(t)w(t)\nonumber
 	\end{eqnarray}
 	in z integriranjem.
+	
 	Vsak nekonstantni skupni faktor $u (t)$ in $v (t)$ lahko absorbiramo v $w (t)$. Poleg tega moramo dopustiti določene izbire za $w (t), u (t), v (t)$, ki dajejo "degenerirane" krivulje s PH:
 	\begin{enumerate}
-		\item če je $w (t) = 0$ ali $u (t) = v (t) = 0$, je dobljeni hodogram $x\prime (t) = y\prime (t) = 0$ definira eno točko namesto zveznega loka,
+		\item če je $w (t) = 0$ ali $u (t) = v (t) = 0$, je dobljeni hodogram $x\prime (t) = y\prime (t) = 0$ in definira eno točko namesto zveznega loka,
 		\item če so $w (t), u (t), v (t)$ vse konstante (z $w$ in vsaj eno od $u$, $v$ neničelno) dobimo enakomerno parametrizirano premico, trivialno krivuljo s PH,
 		\item če sta $u (t)$ in $v (t)$ konstanti, kjer je vsaj ena različna od nič in $w (t)$ ni konstanta, je dobljen lok spet linearen, vendar njegova parametrična hitrost ni konstantna (v splošnem),
 		\item prav tako nastanejo nekonstantno parametrizirani linearni loki (vzporedni z osjo x), če je $w (t)\not = 0$ in je eden od $u (t)$ in $v (t)$ nič.
@@ -56,6 +57,7 @@
 	\begin{remark}
 		Če je $w$ polinom stopnje $\lambda$ in je $\mu$ večja izmed stopenj polinomov $u$ in $v$, je krivulja s PH dobljena z integracijo hodograma (\ref{eq:3}) stopnje $n = \lambda + 2\mu+ 1$.
 	\end{remark}
+
 	\section{B\'ezierjeve kontrolne točke krivulj s PH}
 	Osredotočimo se predvsem na primitivne Pitagorejske hodograme ($u$ in $v$ brez skupne ničle, $w(t)=1$). Taki hodogrami definirajo regularne krivulje s PH, ki zadoščajo $r\prime (t)\not = 0$ za vse $t$. Točka na parametrični krivulji, kjer je $r\prime (t)=0$, je neregularna točka - običajno je to konica ali nenaden obrat tangente. Uporaba ne-konstantnega polinoma $w (t)$ naredi konice (nezaželena značilnost) na ustrezni krivulji s PH, če ima $w (t)$ realne ničle znotraj domene parametra krivulje. Krivulje s PH definirane z integracijo (\ref{eq:3}) primitivnih hodogramov so lihe stopnje, $n = 2\mu + 1$.
 	
@@ -139,9 +141,17 @@
 	$$t^{(0)}_k = t_{k-1}+\frac{\Delta s}{\sigma(t_{k-1})}$$
 	in izbolšujmo rezultat z uporabo Newton-Raphsonove iteracije
 	$$t^{(r)}_k = t^{(r-1)}_{k-1}+\frac{s(t^{(r-1)}_k}{\sigma(t^{(r-1)}_k)}, r = 1, 2,\ldots.$$
+	Zadošča že kakšna iteracija, da dosežemo zadovoljivo natančnost.
 	
+	\textit{$\Delta t = konstanta$, $\Delta s = konstantna$\\
+	\textbf{Slika}. Enakomerno povečanje parametra krivulje s PH (levo) in dolžine loka (desno).}
 	
-	
+	\section{Lastnosti odvoda in integrala}
+	Ker je parametrična hitrost krivulje s PH $r (t)$ definirane z integracijo polinom v $t$, imajo osnovne lastnosti njenih odvodov - enotski tangentni vektor, normala in ukrivljenost - racionalno odvisnost od parametra krivulje. Natančneje, definirani so v smislu polinomov $u (t)$ in $v (t)$, kjer
+	$$\textbf{t} =\frac{(u^2 - v^2, 2uv)}{\sigma},\hspace{10pt} \textbf{n} =\frac{(2uv, v^2 - u^2)}{\sigma},\hspace{10pt} \kappa = 2 \frac{uv\prime - u\prime v}{\sigma^2}.$$
+	Za krivuljo s PH stopnje $n$ sta $\textbf{n}$ in $\textbf{t}$ racionalni funkciji stopnje $n - 1$, medtem ko ima $\kappa$ v števcu stopnjo $n - 3$ in v imenovalcu $2n - 2$.
+	\section{Racionalni odmiki krivulj s PH}
+	Preberi prejšnje in dodaj neko besedilo ...
 	
 	\begin{thebibliography}{1}
 		\bibitem{knjiga} R. T. Farouki: Pythagorean-Hodograph Curves: Algebra and Geometry Inseparable, poglavje 17 in 19.
