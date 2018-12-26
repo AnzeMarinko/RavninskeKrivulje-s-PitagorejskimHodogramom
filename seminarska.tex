@@ -68,7 +68,7 @@
 	\end{eqnarray}
 	ki zadoščajo $u_0v_1 - u_1v_0\not = 0$ in $(u_1 - u_0)^2+ (v_1 - v_0)^2\not = 0$, tako da imata $u (t), v (t)$ različne ničle in nista obe konstanti, nam dajo hodogram
 	\begin{eqnarray}
-	x\prime (t) &=& (u^2_0- v^2_0)B^2_0(t) + (u_0u_1)-v_0v_1)B^2_1(t)+(u^2_1-v^2_1)B^2_2(t),\nonumber\\
+	x\prime (t) &=& (u^2_0- v^2_0)B^2_0(t) + (u_0u_1-v_0v_1)B^2_1(t)+(u^2_1-v^2_1)B^2_2(t),\nonumber\\
 	y\prime(t) &=& 2u_0v_0B^2_0(t)+(u_0v_1+u_1v_0)B^2_1(t)+2u_1v_1B^2_2(t).\nonumber
 	\end{eqnarray}
 	Z integracijo tega hodograma dobimo kubično krivuljo s PH z B\'ezierjevimi kontrolnimi točkami oblike
@@ -141,7 +141,7 @@
 	kjer $t_0 = 0$ in $t_N = 1$. Sedaj iz $\sigma (t) = ds / dt$ in $\sigma (t)$ pozitivno za vse $t$, ko polinoma $u$ in $v$ nimata nobene skupne ničle, sledi, da je $s (t)$ monotono naraščajoča s $t$ in s tem za vsak $k$ vrednost $s$ pri $t_k$ leži med $t_{k - 1}$ in 1. Kot začetni približek vzamemo
 	$$t^{(0)}_k = t_{k-1}+\frac{\Delta s}{\sigma(t_{k-1})}$$
 	in izbolšujmo rezultat z uporabo Newton-Raphsonove iteracije
-	$$t^{(r)}_k = t^{(r-1)}_{k-1}+\frac{s(t^{(r-1)}_k}{\sigma(t^{(r-1)}_k)}, r = 1, 2,\ldots.$$
+	$$t^{(r)}_k = t^{(r-1)}_{k-1}+\frac{s(t^{(r-1)}_k)}{\sigma(t^{(r-1)}_k)}, r = 1, 2,\ldots.$$
 	Zadošča že kakšna iteracija, da dosežemo zadovoljivo natančnost.
 	
 	
