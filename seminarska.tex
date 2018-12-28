@@ -141,7 +141,7 @@
 	kjer $t_0 = 0$ in $t_N = 1$. Sedaj iz $\sigma (t) = ds / dt$ in $\sigma (t)$ pozitivno za vse $t$, ko polinoma $u$ in $v$ nimata nobene skupne ničle, sledi, da je $s (t)$ monotono naraščajoča s $t$ in s tem za vsak $k$ vrednost $s$ pri $t_k$ leži med $t_{k - 1}$ in 1. Kot začetni približek vzamemo
 	$$t^{(0)}_k = t_{k-1}+\frac{\Delta s}{\sigma(t_{k-1})}$$
 	in izbolšujmo rezultat z uporabo Newton-Raphsonove iteracije
-	$$t^{(r)}_k = t^{(r-1)}_k-\frac{s(t^{(r-1)}_k)}{\sigma(t^{(r-1)}_k)}, r = 1, 2,\ldots.$$
+	$$t^{(r)}_k = t^{(r-1)}_k-\frac{s(t^{(r-1)}_k)-k\Delta s}{\sigma(t^{(r-1)}_k)}, r = 1, 2,\ldots.$$
 	Zadošča že kakšna iteracija, da dosežemo zadovoljivo natančnost.
 	
 	
