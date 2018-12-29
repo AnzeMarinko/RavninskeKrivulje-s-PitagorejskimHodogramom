@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{IEEEtran}
 \usepackage[slovene]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -71,7 +71,8 @@
 	\end{eqnarray}
 	ki zadoščajo $u_0v_1 - u_1v_0\not = 0$ in $(u_1 - u_0)^2+ (v_1 - v_0)^2\not = 0$, tako da imata $u (t), v (t)$ različne ničle in nista obe konstanti, nam dajo hodogram
 	\begin{eqnarray}
-	x\prime (t) &=& (u^2_0- v^2_0)B^2_0(t) + (u_0u_1-v_0v_1)B^2_1(t)+(u^2_1-v^2_1)B^2_2(t),\nonumber\\
+	x\prime (t) &=& (u^2_0- v^2_0)B^2_0(t) +\nonumber\\
+	& & (u_0u_1-v_0v_1)B^2_1(t)+(u^2_1-v^2_1)B^2_2(t),\nonumber\\
 	y\prime(t) &=& 2u_0v_0B^2_0(t)+(u_0v_1+u_1v_0)B^2_1(t)+2u_1v_1B^2_2(t).\nonumber
 	\end{eqnarray}
 	Z integracijo tega hodograma dobimo kubično krivuljo s PH z B\'ezierjevimi kontrolnimi točkami oblike
@@ -91,7 +92,8 @@
 	\begin{eqnarray}
 	\textbf{p}_1 &=& \textbf{p}_0 + \frac{1}{5}(u_0^2-v_0^2,2u_0v_0),\nonumber\\
 	\textbf{p}_2 &=& \textbf{p}_1 + \frac{1}{5}(u_0u_1-v_0v_1,u_0v_1+u_1v_0),\nonumber\\
-	\textbf{p}_3 &=& \textbf{p}_2 + \frac{2}{15}(u_1^2-v_1^2,2u_1v_1)+\frac{1}{15}(u_0u_2-v_0v_2,u_0v_2+u_2v_0),\nonumber\\
+	\textbf{p}_3 &=& \textbf{p}_2 + \frac{2}{15}(u_1^2-v_1^2,2u_1v_1)+\nonumber\\
+	& & \frac{1}{15}(u_0u_2-v_0v_2,u_0v_2+u_2v_0),\nonumber\\
 	\textbf{p}_4 &=& \textbf{p}_3 + \frac{1}{5}(u_1u_2-v_1v_2,u_1v_2+u_2v_1),\nonumber\\
 	\textbf{p}_5 &=& \textbf{p}_4 + \frac{1}{5}(u_2^2-v_2^2,2u_2v_2),\nonumber
 	\end{eqnarray}
@@ -109,7 +111,7 @@
 	Torej je
 	$$\sigma (t) =\sum_{k=0}^{n-1} \sigma_kB_k^{n-1}(t),$$
 	kjer so koeficienti 
-	$$\sigma_k =\sum_{j=max(0,k-m)}^{min(m,k)}\frac{\binom{m}{j}\binom{m}{k-j}}{\binom{n-1}{k}}(u_ju_{k-j}+v_jv_{k-j}),\hspace{10px} k = 0,\ldots , n - 1.$$
+	$$\sigma_k =\sum_{j=max(0,k-m)}^{min(m,k)}\frac{\binom{m}{j}\binom{m}{k-j}}{\binom{n-1}{k}}(u_ju_{k-j}+v_jv_{k-j}),$$ $$k = 0,\ldots , n - 1.$$
 	Za kubične krivulje s PH je npr. $\sigma (t)$ kvadratna in ima Bernsteinove koeficiente
 	\begin{eqnarray}
 	\sigma_0 &=& u^2_0+ v^2_0, \nonumber\\
@@ -155,13 +157,14 @@
 			\caption{$\Delta t=konst.$}
 			\label{fig:constDt}
 		\end{subfigure}%
+	
 		\begin{subfigure}{.5\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{konstDs.jpg}
 			\caption{$\Delta s=konst.$}
 			\label{fig:constDs}
 		\end{subfigure}
-		\caption{Enakomerno povečanje parametra krivulje s PH (levo) in dolžine loka (desno). Prikaz točk na krivulji.}
+		\caption{Enakomerno povečanje parametra krivulje s PH (levo) in dolžine loka (desno) - parametrizacija po nekaj iteracijah. Prikaz točk na krivulji.}
 		\label{fig:constD}
 	\end{figure}
 	
@@ -187,24 +190,18 @@
 	določajo B\'ezierjeve kontrolne točke racionalne krivulje odmika.
 	
 	Homogene koordinate za kontrolne točke odmika so lahko strnjeno izražene v smislu prvotne krivulje kot
-	$$\textbf{O}_k =\sum^{min (n - 1, k)}_{j = max (0, k - n)}\frac{\binom{n-1}{j}\binom{n}{k-j}}{\binom{2n-1}{k}}(\sigma_j\textbf{P}_{k-j}+dn\Delta\textbf{P}_j^\perp), \hspace{10pt} k = 0,\ldots, 2n - 1.$$
+	$$\textbf{O}_k =\sum^{min (n - 1, k)}_{j = max (0, k - n)}\frac{\binom{n-1}{j}\binom{n}{k-j}}{\binom{2n-1}{k}}(\sigma_j\textbf{P}_{k-j}+dn\Delta\textbf{P}_j^\perp),$$ $$k = 0,\ldots, 2n - 1.$$
 	
 	S tem dobimo za kubične krivulje s PH 6 kontrolnih točk racionalnih odmikov kot krivulj pete stopnje, za krivulje s PH pete stopnje pa dobimo 10 kontrolnih točk racionalnih odmikov kot krivulj devete stopnje.
 	
 	\centering
-	\includegraphics[width=\linewidth]{odmik.jpg} \captionof{figure}{Krivulja s PH in nekaj racionalnimi odmiki}
+	\includegraphics[width=\linewidth]{odmik.jpg} \captionof{figure}{Krivulja s PH (rumena) in racionalni odmiki za $d=-0.2,-0.1,0.1$.}
 	\label{fig:odmik}
 	
-	
-	
-	
-	
-	
-	\vspace{90pt}
-	Na tem mestu pridejo slike obravnavane na koncu 17. poglavja, ki govorijo o stabilnosti zamikov ...
+	Opazimo, da so racionalni odmiki eksaktni za vsak $d$ tudi v primeru špic in ko krivulja prečka samo sebe.
 	
 	\section{Nadaljevanje}
-	Obravnava 19. poglavja, implementacija v matlab, zaključek ...
+	Obravnava 19. poglavja, implementacija 19 poglavja v Matlab in zaključek
 	
 	\begin{thebibliography}{1}
 		\bibitem{knjiga} R. T. Farouki: Pythagorean-Hodograph Curves: Algebra and Geometry Inseparable, poglavje 17 in 19.
