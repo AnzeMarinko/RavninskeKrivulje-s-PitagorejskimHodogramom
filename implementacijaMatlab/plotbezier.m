@@ -1,10 +1,10 @@
-function plotbezier (B,t,kontrolniPoligon)
+function plotbezier (B,t,kontrolniPoligon, naslov, barva)
 % Opis :
 % plotbezier nariše Bezierjevo krivuljo za dane kontrolne
 % tocke in seznam parametrov
 %
 %Definicija :
-% plotbezier (B,t, kontrolniPoligon)
+% plotbezier (B,t, kontrolniPoligon, naslov, barva)
 %
 %Vhodni podatki :
 % B matrika velikosti n+1 x d, ki predstavlja kontrolne
@@ -18,7 +18,11 @@ function plotbezier (B,t,kontrolniPoligon)
 if size(B,2) == 2
     % bezierjeva krivulja
     b = bezier(B,t);
-    plot(b(1,:),b(2,:));
+    if barva == ''
+        plot(b(1,:),b(2,:));
+    else
+        plot(b(1,:),b(2,:),barva);
+    end
     hold on;
 
     % kontrolni poligon
@@ -37,6 +41,8 @@ if size(B,2) == 3
         plot3(B(:,1),B(:,2),B(:,3),'r:.');
     end
 end
+title(naslov);
+daspect([1 1 1]);
 
 end
 

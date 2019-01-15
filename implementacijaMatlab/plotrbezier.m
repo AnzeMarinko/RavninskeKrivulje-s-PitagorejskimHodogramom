@@ -1,4 +1,4 @@
-function pb = plotrbezier(B,w,t, kontrolniPoligon)
+function pb = plotrbezier(B,w,t,kontrolniPoligon)
 % Opis :
 % plotrbezier narise kontrolni poligon in tocke na
 % racionalni Bezierovi krivulji
@@ -25,13 +25,13 @@ for i = 1:n
 end
 
 rb = rbezier(B,w,t);
-plot(rb(:,1),rb(:,2))
+plot(rb(:,1),rb(:,2));
 hold on;
 if kontrolniPoligon == true
     plot(B(:,1),B(:,2),'k:s');
     hold on;
     plot(q(:,1),q(:,2),'rs');
 end
-
+daspect([1 1 1]);
 end
 
